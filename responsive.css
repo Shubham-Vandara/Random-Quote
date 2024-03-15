@@ -1,0 +1,15 @@
+@media screen and (max-width: 567px) {
+    .content .quotes-div {
+        width: 100%;
+    }
+
+    .content .tags-author {
+        flex-direction: column;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}

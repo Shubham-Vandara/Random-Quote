@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PAGE TITLE -->
+    <title>
+      Random Quote Generator: Get Inspired Every Day! | Shubham Vandara
+    </title>
+    <!-- META DESCRIPTION -->
+    <meta
+      name="description"
+      content="Discover inspiring quotes from a variety of sources with our random quote generator. Click to get a new quote, copy it to your clipboard, and explore the wisdom of different authors and topics. Start your day with a dose of inspiration!"
+    />
+    <!-- FAVICON -->
+    <link rel="icon" href="https://i.ibb.co/mBqpwhV/sv-circle-logo.png" />
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- CUSTOM STYLESHEETS -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="responsive.css" type="text/css" />
+  </head>
+  <body>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- CONTENT SECTION -->
+      <div class="content">
+        <!-- HEADER -->
+        <h1>Quote of the day</h1>
+        <!-- QUOTE DISPLAY -->
+        <div class="quotes-div">
+          <p class="quotes"></p>
+        </div>
+        <!-- TAGS AND AUTHOR -->
+        <div class="tags-author">
+          <p class="tags"></p>
+          <p class="author"></p>
+        </div>
+        <!-- LINE DIVIDER -->
+        <div class="line"></div>
+        <!-- QUOTE BUTTONS -->
+        <div class="quote-button">
+          <!-- COPY BUTTON -->
+          <div class="copy-icon">
+            <span class="material-symbols-outlined icon"> content_copy </span>
+          </div>
+          <!-- GET NEW QUOTE BUTTON -->
+          <button class="new-quote">Get new quote</button>
+        </div>
+        <!-- FOOTER -->
+        <footer>
+          <p>
+            Copyright ©2024 All rights reserved | Created By Shubham Vandara |
+            Made with ❤️
+          </p>
+        </footer>
+      </div>
+    </div>
+    <!-- CDN FOR AXIOS LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <!-- APP SCRIPT -->
+    <script defer src="app.js"></script>
+  </body>
+</html>
