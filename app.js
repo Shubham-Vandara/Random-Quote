@@ -1,10 +1,9 @@
 // RANDOM QUOTE API URL
-const randomQuoteAPI = "https://api.quotable.io/random";
+const randomQuoteAPI = "https://programming-quotesapi.vercel.app/api/random";
 
 // DOM ELEMENTS SELECTION
 const quoteButton = document.querySelector(".new-quote"); // Button to fetch new quote
 const quotes = document.querySelector(".quotes"); // Element to display quote
-const tags = document.querySelector(".tags"); // Element to display tags
 const author = document.querySelector(".author"); // Element to display author
 const copyIcon = document.querySelector(".copy-icon"); // Icon for copying
 const iconSpan = document.querySelector(".icon"); // Span to indicate copy status
@@ -13,8 +12,8 @@ const iconSpan = document.querySelector(".icon"); // Span to indicate copy statu
 async function fetchRandomQuote() {
   try {
     const response = await axios.get(randomQuoteAPI);
-    const { content, author: quoteAuthor, tags: quoteTags } = response.data;
-    return { content, quoteAuthor, quoteTags };
+    const { quote, author: quoteAuthor } = response.data;
+    return { quote, quoteAuthor };
   } catch (error) {
     console.error("Error fetching quote:", error);
     return null;
@@ -22,10 +21,9 @@ async function fetchRandomQuote() {
 }
 
 // FUNCTION TO DISPLAY QUOTE AND RELATED INFO
-function displayQuote({ content, quoteAuthor, quoteTags }) {
-  quotes.textContent = content;
+function displayQuote({ quote, quoteAuthor }) {
+  quotes.textContent = quote;
   author.textContent = `Author: ${quoteAuthor}`;
-  tags.textContent = `Tags: ${quoteTags.join(", ")}`;
 }
 
 // FUNCTION TO COPY QUOTE TO CLIPBOARD
@@ -46,9 +44,8 @@ quoteButton.addEventListener("click", async () => {
   const quoteData = await fetchRandomQuote();
   if (quoteData) {
     displayQuote(quoteData);
-    localStorage.setItem("quoteContent", quoteData.content);
+    localStorage.setItem("quoteContent", quoteData.quote);
     localStorage.setItem("quoteAuthor", quoteData.quoteAuthor);
-    localStorage.setItem("quoteTags", quoteData.quoteTags.join(", "));
   }
 });
 
@@ -64,7 +61,6 @@ window.addEventListener("load", () => {
     displayQuote({
       content: storedContent,
       quoteAuthor: storedAuthor,
-      quoteTags: storedTags.split(", "),
     });
   } else {
     quoteButton.click(); // Fetch a new quote on page load if no stored quote is available

@@ -76,7 +76,7 @@ a {
 /* STYLES FOR TAGS AND AUTHOR */
 .content .tags-author {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
