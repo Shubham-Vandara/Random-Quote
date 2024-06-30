@@ -1,12 +1,12 @@
-# Random Quote Generator
+# Programming Quote
 
-A simple web application that generates random quotes to inspire you every day! Click to get a new quote, copy it to your clipboard, and explore the wisdom of different authors and topics.
+A simple web application that generates programming quotes to inspire you every day! Click to get a new quote, copy it to your clipboard, and explore the wisdom of different authors.
 
 ## Features
 
-- Generates random quotes from a variety of sources.
+- Generates Programming quotes from a variety of sources.
 - Allows users to copy quotes to their clipboard.
-- Easy to use interface with clean design.
+- Easy-to-use interface with clean design.
 - Responsive layout for use on various devices.
 
 ## Technologies Used
