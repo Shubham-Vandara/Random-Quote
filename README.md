@@ -26,5 +26,8 @@ To explore the code or contribute to the project, clone the repository to your l
 2. Run the following command to clone the repository:
 
    ```bash
-   git clone https://github.com/shubham-vandara/Random-Quote.git
+   git clone https://shubham-vandara.github.io/programming-quote/
 
+## Project Link
+
+https://shubham-vandara.github.io/programming-quote/
